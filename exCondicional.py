@@ -2,13 +2,15 @@ valor = float(input("Digite o valor do pedido:"))
 
 """
 Regra de negócio:
-se a venda for até R$ 100: 5% de desconto
+se a venda for até R$ 100: não tem desconto
 se a venda for entre R$ 100,01 e R$ 299,99: 10% de desconto
 se a venda for acima de R$ 300: 15% de desconto
 """
 
 if valor <= 100:
-    desconto = 0.95
+    print(f"O valor da compra deu R${valor}.")
+    exit()
+
     
 elif valor > 100 and valor <= 299.99:
     desconto = 0.90
