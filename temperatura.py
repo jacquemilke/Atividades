@@ -1,4 +1,4 @@
-temperatura = int(input("Digite a emperatura atual: "))
+temperatura = int(input("Digite a temperatura atual: "))
 
 if temperatura <= 15:
     print("Está frio, ligar aquecedor")
