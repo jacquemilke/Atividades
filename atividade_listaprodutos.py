@@ -15,7 +15,6 @@ for indice, produto in enumerate(produtos):
     Quantidade: {quantidade}
     Valor Unitário: {preco}
     Subtotal: {subtotal}
-    --------------------
     """
 
     print(mensagem)
