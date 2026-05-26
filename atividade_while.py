@@ -16,5 +16,4 @@ while usuario != usuario_correto or senha != senha_correta:
         print("Usuário ou senha inválidos. Digite novamente: ")
 
 else:
-    print("Acesso permitido.")  
-
+    print("Acesso permitido.")
