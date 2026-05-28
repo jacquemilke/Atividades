@@ -41,6 +41,7 @@ while True:
 
     if escolha not in ["1", "2", "3", "4", "0"]:
         print("Opção inválida. Tente novamente.")
+        continue
 
     numero_1 = int(input("Digite um valor: "))
     numero_2 = int(input("Digite outro valor: "))
