@@ -42,5 +42,5 @@ mensagem = f"""
     Valor: R$ {preco_escolhido}
     
     """
-
+    
 print(mensagem)
