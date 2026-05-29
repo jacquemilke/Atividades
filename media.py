@@ -1,5 +1,15 @@
 import math
 
+def calcular_media(notas: list) -> float:
+    media = sum(notas) / len(notas)
+    return media
+
+contador = 1
+notas = []
+
+while True:
+    nota = float(input("Digite a nota: {contador}"))
+
 nota_1 = float(input("Digite a primeira nota: "))
 nota_2 = float(input("Digite a segunda nota: "))
 nota_3 = float(input("Digite a terceira nota: "))
