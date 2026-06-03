@@ -17,7 +17,7 @@ def celsius_fahrenheit():
     print(f"A conversão de Celsius para Fahrenheit é: {round(resultado, 2)}")
 
 def reais_dolar():
-    valor = float(input("Digite um valor em dólar para converter: "))
+    valor = float(input("Digite um valor em dólar para converter: ")) 
     resultado = valor / 5
     print(f"A conversão de Reais para Dólar é: U$ {resultado}")
 
