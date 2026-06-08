@@ -11,31 +11,26 @@ def exibir_menu():
     opcao = input("Escolha uma opção: ")
     return opcao
 
-saldos = 0.0
-
-def depositar():
+def depositar(saldos):
     add_deposito = float(input("Digite o valor a ser depositado: "))
-    saldos.append(add_deposito)
-    print(f"O depósito de R$ {add_deposito} foi adicionado com sucesso..")
-
-def sacar():
-    if saldos == 0:
+    saldos = saldos + add_deposito
+    print(f"O depósito de R$ {add_deposito} foi adicionado com sucesso.")
+    return saldos
+    
+def sacar(saldos):
+    saque = float(input(f"Digite o valor que deseja sacar: "))
+    if saque > saldos:
         print("==== Não há saldo suficiente para sacar. ====")
 
     else:
-        remove_saldo = int(input(f"Digite o valor que deseja sacar: "))
-        
-        saldos.pop(remove_saldo -1)
-        print("==== O valor foi sacado. ====")
+        saldos = saldos - saque
+        print(f"Saque de {saque} realizado.")
+        return saldos
 
-def ver_saldo():
-    if not saldos:
-        print("==== Não há saldo para listar. ====")
+def ver_saldo(saldos):
+        print(f"Saldo atual R$ {saldos}")
 
-    else:
-        print(f"Essa é o seu saldo: ")
-        for i, saldo in enumerate(saldos):
-            print(f"{i+1} - {saldo}")
+saldos = 0.0
 
 while True:
     opcao = exibir_menu()
@@ -47,8 +42,11 @@ while True:
         print("==== Opção inválida. Tente novamente. ====")
         continue
 
-    if opcao == "1": depositar()
+    if opcao == "1":
+        saldos = depositar(saldos)
 
-    if opcao == "2": sacar()
+    if opcao == "2":
+        saldos = sacar(saldos)
 
-    if opcao == "3": ver_saldo()
+    if opcao == "3":
+        ver_saldo(saldos)
