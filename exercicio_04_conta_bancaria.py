@@ -24,7 +24,7 @@ def sacar(saldos):
 
     else:
         saldos = saldos - saque
-        print(f"Saque de {saque} realizado.")
+        print(f"Saque de R$ {saque} realizado.")
         return saldos
 
 def ver_saldo(saldos):
